@@ -2,7 +2,6 @@
 title: "Quantum navigation could solve the military’s GPS jamming problem"
 date: Tue, 16 Dec 2025 10:00:00 +0000
 tags: ["AI日报"]
-link: https://www.technologyreview.com/2025/12/16/1129887/quantum-navigation-militarys-gps-jamming-problem/
 ---
 
 > **摘要**：GPS 容易被干扰？别担心，量子导航来救场！这项技术利用光和原子的量子特性，打造超灵敏传感器，让飞机、潜艇摆脱对卫星的依赖。 从原子钟到磁场探测，量子导航正快速发展，有望成为未来导航的关键。虽然还在发展中，但这项技术的前景令人兴奋，或将彻底改变我们的导航方式。

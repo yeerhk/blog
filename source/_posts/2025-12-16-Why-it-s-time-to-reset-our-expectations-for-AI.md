@@ -2,7 +2,6 @@
 title: "Why it’s time to reset our expectations for AI"
 date: Tue, 16 Dec 2025 12:29:04 +0000
 tags: ["AI日报"]
-link: https://www.technologyreview.com/2025/12/16/1129946/why-its-time-to-reset-our-expectations-for-ai/
 ---
 
 > **摘要**：AI 的“神话”破灭了吗？过去几年，我们对 AI 的期望值被过度炒作，如今看来，AI 似乎并没有实现当初承诺的“宏伟蓝图”。《麻省理工科技评论》最新系列文章“Hype Correction”带你重新审视 AI，探索它真正的潜力，以及我们应该关注的未来方向。
