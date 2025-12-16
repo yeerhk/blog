@@ -1,0 +1,40 @@
+name: Hexo Auto Deploy
+
+on:
+  push:
+    branches:
+      - master  # 你的源码分支名，如果是 main 请改成 main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Setup Hexo
+      run: |
+        npm install hexo-cli -g
+        npm install
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+
+    - name: Deploy
+      run: |
+        hexo clean
+        hexo generate
+        hexo deploy
+      env:
+        # 这里需要注意，通常需要配置 Token，但如果你的 source 和 public 在同一个库
+        # 这一步可能会因为权限报错。
+        # 先试运行，如果报错我们需要去 GitHub 设置里加一个 Token
+        DEPLOY_REPO: ${{ secrets.GITHUB_TOKEN }} 
