@@ -3,7 +3,7 @@ name: Hexo Auto Deploy
 on:
   push:
     branches:
-      - master  # 你的源码分支名，如果是 main 请改成 main
+      - master  # 确保这里跟你的源码分支名一致
 
 jobs:
   build:
@@ -23,6 +23,18 @@ jobs:
         npm install hexo-cli -g
         npm install
 
+    # === 新增部分开始：配置 SSH 钥匙 ===
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ secrets.HEXO_DEPLOY_KEY }}
+
+    - name: Scan Host Key
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H lee.20130829.xyz >> ~/.ssh/known_hosts
+    # === 新增部分结束 ===
+
     - name: Configure Git
       run: |
         git config --global user.name "GitHub Action"
@@ -33,8 +45,3 @@ jobs:
         hexo clean
         hexo generate
         hexo deploy
-      env:
-        # 这里需要注意，通常需要配置 Token，但如果你的 source 和 public 在同一个库
-        # 这一步可能会因为权限报错。
-        # 先试运行，如果报错我们需要去 GitHub 设置里加一个 Token
-        DEPLOY_REPO: ${{ secrets.GITHUB_TOKEN }} 
