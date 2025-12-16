@@ -1,0 +1,46 @@
+/* 修改文章页【大标题】的颜色 */
+#post-info .post-title {
+    color: #87ceeb !important; /* 这里改成你想要的颜色，比如白色是 #ffffff */
+}
+
+/* 修改文章页【正文文字】的颜色 */
+#article-container {
+    color: #000000 !important; /* 这里改成你想要的颜色，比如深灰 #333333 */
+}
+
+/* 如果你想顺便把正文里的【各级标题 H1, H2...】颜色也改了 */
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4 {
+    color: #0000ff !important; /* 这里改成你想要的颜色 */
+}
+/* --- 文章顶部元数据颜色修改开始 --- */
+
+/* 1. 修改文字颜色（包括发表于、时间、地点等文字） */
+#post-info #post-meta {
+    color: #e0e0e0 !important; /* 这里填颜色，建议用浅色，防止背景图太深看不清 */
+}
+
+/* 2. 修改图标颜色（前面的日历、时钟等小图标） */
+#post-info #post-meta i {
+    color: #ffffff !important; /* 这里填颜色 */
+}
+
+/* 3. 修改元数据之间的分隔符（也就是那个竖线 | 或圆点）颜色 */
+#post-info #post-meta .post-meta-separator {
+    color: #ffffff !important; 
+}
+
+/* 4. 修改元数据里的链接颜色（如果你的分类是链接形式） */
+#post-info #post-meta a {
+    color: #ffffff !important; 
+    text-decoration: underline; /* 可选：加上下划线 */
+}
+
+/* 5. 鼠标悬停在链接上时的颜色 */
+#post-info #post-meta a:hover {
+    color: #ff0000 !important; 
+}
+
+/* --- 文章顶部元数据颜色修改结束 --- */
